@@ -1,0 +1,11 @@
+Conforme as classes fornecidas, Veiculo, Carro, Onibus, Concessionaria, ConcessionariaTeste e DAO...
+
+1 - Implemente os seguintes métodos da Interface DAO, nas classes que fazem uso desta interface: 
+    public void atualizar(Object obj, String registro); 
+    public void deletar(String registro);
+    public Object getByRegistro(String registro);
+    
+2- Implemente o método abstract da classe Veículo nas suas subclasses:
+    public abstract void acelerar();
+    
+3- Explique, com suas palavras, a funcionalidade e o uso da classe ArrayList. 
