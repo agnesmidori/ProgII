@@ -22,5 +22,9 @@ public class Onibus extends Veiculo {
     public void setCapacidade(int capacidade) {
         this.capacidade = capacidade;
     }
+    
+    public void acelerar() {
+    	System.out.println("A velocidade máxima é de 120 km/h.");
+	}
 
 }
