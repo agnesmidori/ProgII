@@ -18,12 +18,8 @@ public class Carro extends Veiculo {
         return (super.getDetalhes(veic) +  " Ã‰ Sedan ou Compacto: " + (isSedan ? "Sedan" : "Compacto")) ; 
     }
     
-    public abstract void acelerar() {
-    	boolean acelerar = false;
-    	
-    	
-    	System.out.println ("")
-    	
-    }
+    public void acelerar() {
+    	System.out.println("A velocidade máxima é de 240 km/h.");
+	}
 
 }
