@@ -1,46 +1,59 @@
-
-// one class needs to have a main() method
 import java.util.ArrayList;
-import java.util.List;
 
 public class Concessionaria implements DAO {
 
-  ArrayList<Veiculo> listVeiculos; 
+  ArrayList<Veiculo> listVeiculos;
+ 
 
   public Concessionaria() {
-    listVeiculos = new ArrayList();
+	  listVeiculos = new ArrayList <Veiculo>();
   }
 
   public void salvar(Object veic) {
       listVeiculos.add((Veiculo)veic);  
   }
-
+  
+  public void atualizar(Object veic, String registro) {
+	  int index = 0;
+	  
+	  for (Veiculo veiculo : listVeiculos) {
+		  if (veiculo.getRegistro().contains(registro)) {
+			  index = listVeiculos.indexOf(veiculo);
+			  listVeiculos.set(index, (Veiculo) veic);
+		  }
+	  }
+  }
+  
+ 
+  public void deletar(String registro) {
+	  int index = 0;
+	  	  
+	  for (Veiculo veiculo : listVeiculos) {
+		  if (veiculo.getRegistro() == registro) {
+			  listVeiculos.get(index);
+			  listVeiculos.remove(index);
+			  break;
+		  }
+	  }
+  }
+  
+  
+  public Object getByRegistro(String registro) {
+	  Veiculo veiculoEncontrado = null;
+	  
+	  for (Veiculo veiculo : listVeiculos) {
+		  if (veiculo.getRegistro() == registro) {
+			  veiculoEncontrado = veiculo;
+			  break;
+		  }
+		  
+	  }
+	return veiculoEncontrado;
+  }
+  
   public void print() {
     for (Veiculo veic : listVeiculos) {
       System.out.println(veic.getDetalhes(veic));
     }
-  }
-
-
-  //Implementar
-  public void atualizar(Object obj) {
-    
-  }
-
-  
-  //Implementar
-  public void deletar(int id) {
-  }
-
-  
-  //Implementar
-  public Object getById(int id) {
-    return null;
-  }
-
-  
-  //Implementar
-  public List<Object> getAll() {
-    return null;
   }
 }
