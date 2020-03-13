@@ -1,3 +1,4 @@
+// one class needs to have a main() method
 public class ConcessionariaTeste
 {
   // arguments are passed using the text field below this editor
@@ -28,19 +29,36 @@ public class ConcessionariaTeste
       loja.salvar(chevette);
       loja.salvar(sogal);
       loja.print();
-      System.out.println("--------------");
+      System.out.println("1 --------------");
       
       loja.atualizar(corolla, "blebleble");
       loja.print();
-      System.out.println("--------------");
+      System.out.println("2 --------------");
+      
+      
+      loja.salvar(sogal);
+      loja.print();
+      System.out.println("3 --------------");
+      
+      loja.deletar("blebleble");
+      loja.print(); 
+      System.out.println("4 --------------");
       
       loja.deletar("blablabla");
-      loja.deletar("blebleble");
       loja.print();      
-      System.out.println("--------------");
+      System.out.println("5 --------------");
       
       loja.atualizar(chevette, "bambambam");
       loja.print();
-
-  }
+      
+      loja.salvar(sogal);
+      loja.salvar(corolla);
+      loja.print();      
+      System.out.println("6 --------------");
+      
+      Object teste = loja.getByRegistro("blebleble");
+      System.out.println(((Veiculo) teste).getFabricante());
+      
+   }
 }
+
