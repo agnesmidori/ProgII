@@ -29,8 +29,8 @@ public class Concessionaria implements DAO {
 	  int index = 0;
 	  	  
 	  for (Veiculo veiculo : listVeiculos) {
-		  if (veiculo.getRegistro() == registro) {
-			  listVeiculos.get(index);
+		  if (veiculo.getRegistro().contains(registro)) {
+			  index = listVeiculos.indexOf(veiculo);
 			  listVeiculos.remove(index);
 			  break;
 		  }
@@ -44,7 +44,6 @@ public class Concessionaria implements DAO {
 	  for (Veiculo veiculo : listVeiculos) {
 		  if (veiculo.getRegistro() == registro) {
 			  veiculoEncontrado = veiculo;
-			  break;
 		  }
 		  
 	  }
