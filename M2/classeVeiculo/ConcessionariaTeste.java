@@ -58,7 +58,6 @@ public class ConcessionariaTeste
       
       Object teste = loja.getByRegistro("blebleble");
       System.out.println(((Veiculo) teste).getFabricante());
-      
-   }
+  }
 }
 
