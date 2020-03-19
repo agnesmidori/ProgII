@@ -1,5 +1,14 @@
 import java.util.ArrayList;
 
+/* 
+ * Questão 3)
+ * ArrayList é uma classe que faz parte do pacote da biblioteca java.util, 
+ * ela só pode armazenar objetos e é dinâmica, ou seja, diferente de arrays, 
+ * em que não podemos alterar o tamanho, ArrayList pode ter o seu tamanho 
+ * aumentado ou diminuído, conforme adicionamos ou retiramos elementos através dos comandos 
+ * .add/.remove. 
+ */
+
 public class Concessionaria implements DAO {
 
   ArrayList<Veiculo> listVeiculos;
